@@ -23,7 +23,6 @@ const ListItem = ({ task }) => {
 
   const focusOut = (value) => {
     setEditable(false);
-    alert(value);
     setTask({ id, complete, todo: value });
   };
   return (
@@ -45,7 +44,7 @@ const ListItem = ({ task }) => {
         />
       ) : (
         <div onClick={() => setEditable(!editable)} className="list-text">
-          <div className={complete && "complete"}>{task.todo}</div>
+          <div className={complete && "complete"}>{value}</div>
         </div>
       )}
     </div>
